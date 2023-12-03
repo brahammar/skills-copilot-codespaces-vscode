@@ -1,12 +1,11 @@
-// Create a server
+const http = require('http');
+
 const server = http.createServer((req, res) => {
-    // Handle incoming requests
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello, world!');
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello, World!');
 });
 
-// Start the server
 server.listen(3000, 'localhost', () => {
-    console.log('Server is running on http://localhost:3000');
+  console.log('Server running at http://localhost:3000/');
 });
